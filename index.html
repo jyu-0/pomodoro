@@ -64,44 +64,29 @@
     </div>
   </section><!-- End Hero Section -->
   
-  <script>
-      var minutes = 25;
-      var seconds = "00";
+ <body>
+    <h1>Pomodoro Timer</h1>
+    <div id="container">
+        <p id="work" class="label">Work:</p><p id="break" class="label">Break:</p><p id="cycles" class="label">Cycles:</p>
+        <!--Work Timer-->
+        <div id="work-timer" class="timer">
+            <p id="w_minutes">25</p><p class="semicolon">:</p><p id="w_seconds">00</p>
+        </div>
 
-      function template(){
-        document.getElementById("minutes").innerHTML = minutes;
-        document.getElementById("seconds").innerHTML = seconds;
-      }
-      
-      function start(){
-        minutes = 24;
-        seconds = 59;
+        <!--Cycle Counter-->
+        <p id="counter" class="timer">0</p>
 
-        document.getElementById("minutes").innerHTML = minutes;
-        document.getElementById("seconds").innnerHTML = seconds;
-
-        var minutes_interval = setInterval(minutesTimer, 60000);
-        var seconds_interval = setInterval(secondsTimer, 1000);
-
-        function minutesTimer(){
-          minutes = minutes-1;
-          document.getElementById("minutes").innerHTML = minutes;
-        }
-
-        function secondsTimer(){
-          seconds = seconds-1;
-          document.getElementById("seconds").innerHTML = seconds;
-
-          if(seconds<=0){
-            if(minutes<=0){
-              clearInteval(minutes_interval);
-              clearInterval(seconds_interval);
-            }
-            seconds = 60;
-          }
-        }
-      }
-    </script>
+        <!--Break Timer-->
+        <div id="break-timer" class="timer">
+            <p id="b_minutes">05</p><p class="semicolon">:</p><p id="b_seconds">00</p>
+        </div>
+        <button id="start" class="btn">Start</button>
+        <button id="stop" class="btn">Pause</button>
+        <button id="reset" class="btn">Reset</button>
+    </div>
+    <script src="main.js"></script>
+   
+</body>
     
     <body onload="template()">
       <div class="container timer">
