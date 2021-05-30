@@ -21,6 +21,9 @@ body {
   height: 20rem;
   border: 5px solid #35b535;
   border-radius: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
