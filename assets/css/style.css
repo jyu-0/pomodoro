@@ -15,7 +15,12 @@ body {
 }
 
 .timer{
-  
+  color: #fff;
+  text-align: center;
+  width: 20rem;
+  height: 20rem;
+  border: 5px solid #fff;
+  border-radius: 10rem;
 }
 
 a {
